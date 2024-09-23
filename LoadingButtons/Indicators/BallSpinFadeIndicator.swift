@@ -33,10 +33,11 @@ import UIKit
 open class BallSpinFadeIndicator: LBIndicator {
     
     open override func setupAnimation(in layer: CALayer, size: CGSize) {
+        let tempSize = CGSize(width: 20, height: 20)
         let circleSpacing: CGFloat = -2
-        let circleSize = (size.width - 4 * circleSpacing) / 5
-        let x = (layer.bounds.size.width - size.width) / 2
-        let y = (layer.bounds.size.height - size.height) / 2
+        let circleSize = (tempSize.width - 4 * circleSpacing) / 5
+        let x = (layer.bounds.size.width - tempSize.width) / 2
+        let y = (layer.bounds.size.height - tempSize.height) / 2
         let duration: CFTimeInterval = 1
         let beginTime = CACurrentMediaTime()
         let beginTimes: [CFTimeInterval] = [0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.84]
@@ -73,7 +74,7 @@ open class BallSpinFadeIndicator: LBIndicator {
             let circle = circleAt(angle: CGFloat(Double.pi / 4) * CGFloat(i),
                                   size: circleSize,
                                   origin: CGPoint(x: x, y: y),
-                                  containerSize: size,
+                                  containerSize: tempSize,
                                   color: color)
 
             animation.beginTime = beginTime + beginTimes[i]
