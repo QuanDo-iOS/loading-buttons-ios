@@ -265,7 +265,7 @@ open class LoadingButton: UIButton {
     // touchesBegan
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.backgroundColor = self.bgColor == UIColor.clear ? .lightGray : self.bgColor.getColorTint()
+//        self.backgroundColor = self.bgColor == UIColor.clear ? .lightGray : self.bgColor.getColorTint()
     }
     // touchesEnded
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -280,7 +280,7 @@ open class LoadingButton: UIButton {
     // touchesMoved
     open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        self.backgroundColor = self.bgColor == UIColor.clear ? .lightGray : self.bgColor.getColorTint()
+//        self.backgroundColor = self.bgColor == UIColor.clear ? .lightGray : self.bgColor.getColorTint()
     }
 }
 // MARK: - UIActivityIndicatorView
